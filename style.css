@@ -1,0 +1,25 @@
+body {
+  font-family: "Poppins", "Kantumruy Pro", sans-serif;
+  scroll-behavior: smooth;
+}
+.glass-nav {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+}
+.gradient-text {
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.gradient-blue {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+.portfolio-card:hover .overlay {
+  opacity: 1;
+}
+/* Modal Style */
+#previewModal {
+  display: none;
+  z-index: 1000;
+}

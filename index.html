@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Sweet - Creative & Digital Services</title>
+    <link rel="icon" type="image/png" href="https://i.postimg.cc/mrmd3QBh/logo.png">
+    <!-- Tailwind CSS for modern styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for Khmer and English -->
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:wght@300;400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Font Awesome for Social Media Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Model Viewer for 3D files -->
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="glass-nav fixed w-full top-0 z-50 h-16 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="flex justify-between items-center h-full">
+                <div class="flex items-center gap-3">
+                    <!-- កន្លែងដាក់ Logo ផ្ទាល់ខ្លួន -->
+                    <div class="flex items-center gap-2">
+                        <div class="p-1 bg-white rounded-xl shadow-sm border border-gray-100">
+                            <img src="https://i.postimg.cc/mrmd3QBh/logo.png" alt="Logo" class="w-10 h-10 object-contain">
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <span class="text-xl font-bold leading-none tracking-tight">
+                                <span style="color: #1E73FF;">Blue</span> <span class="text-black">Sweet</span>
+                            </span>
+                            <span class="text-[8px] text-gray-500 font-light tracking-[0.4em] uppercase mt-1">C R E A T I V E</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="hover:text-blue-600 transition font-medium">ទំព័រដើម</a>
+                    <a href="#services" class="hover:text-blue-600 transition font-medium">សេវាកម្ម</a>
+                    <a href="#portfolio" class="hover:text-blue-600 transition font-medium">ស្នាដៃ</a>
+                    <a href="#team" class="hover:text-blue-600 transition font-medium">សមាជិកក្រុម</a>
+                    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition shadow-md shadow-blue-100 flex items-center h-10">ចាប់ផ្ដើមគម្រោង</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <i data-lucide="menu" class="cursor-pointer"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-4">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">បង្កើតគំនិតច្នៃប្រឌិតទៅជា <span class="gradient-text">ការពិត</span></h1>
+            <p class="text-gray-600 text-lg mb-10 max-w-2xl mx-auto">Blue Sweet ផ្តល់ជូនសេវាកម្មឌីជីថលកម្រិតខ្ពស់ ដើម្បីជួយអោយអាជីវកម្មរបស់អ្នកកាន់តែលេចធ្លោ Dominic.</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#portfolio" class="bg-blue-600 text-white px-8 py-3 rounded-xl font-semibold shadow-lg hover:shadow-blue-200 transition">មើលស្នាដៃ</a>
+                <a href="#services" class="bg-white border border-gray-200 px-8 py-3 rounded-xl font-semibold hover:bg-gray-50 transition">សេវាកម្មរបស់យើង</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold mb-4">សេវាកម្មរបស់យើង</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Graphic Design -->
+                <div onclick="navigateToCategory('graphic')" class="p-8 bg-blue-50 rounded-3xl hover:-translate-y-2 transition duration-300 cursor-pointer group">
+                    <div class="w-12 h-12 bg-blue-600 text-white rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+                        <i data-lucide="palette"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Graphic Design</h3>
+                    <p class="text-gray-600 text-sm">រចនា Logo, Poster, និង Branding គ្រប់ប្រភេទដែលទាក់ទាញបំផុត Dominic.</p>
+                </div>
+                <!-- Video Editing -->
+                <div onclick="navigateToCategory('video')" class="p-8 bg-purple-50 rounded-3xl hover:-translate-y-2 transition duration-300 cursor-pointer group">
+                    <div class="w-12 h-12 bg-purple-600 text-white rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+                        <i data-lucide="video"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Video Editing</h3>
+                    <p class="text-gray-600 text-sm">កាត់តវីដេអូពាណិជ្ជកម្ម និង Content សម្រាប់បណ្តាញសង្គម Dominic.</p>
+                </div>
+                <!-- 3D Modeling -->
+                <div onclick="navigateToCategory('3d')" class="p-8 bg-green-50 rounded-3xl hover:-translate-y-2 transition duration-300 cursor-pointer group">
+                    <div class="w-12 h-12 bg-green-600 text-white rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+                        <i data-lucide="box"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">3D Modeling</h3>
+                    <p class="text-gray-600 text-sm">បង្កើតម៉ូដែល 3D និងការបង្ហាញផលិតផលបែប 360 ដឺក្រេ Dominic.</p>
+                </div>
+                <!-- Web Design -->
+                <div onclick="navigateToCategory('web')" class="p-8 bg-orange-50 rounded-3xl hover:-translate-y-2 transition duration-300 cursor-pointer group">
+                    <div class="w-12 h-12 bg-orange-600 text-white rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:scale-110">
+                        <i data-lucide="layout"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Web Design</h3>
+                    <p class="text-gray-600 text-sm">រចនា និងអភិវឌ្ឍគេហទំព័រដែលមានលក្ខណៈទំនើប និង Responsive Dominic.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">ស្នាដៃរបស់យើង</h2>
+                <div class="flex justify-center flex-wrap gap-4 mt-8">
+                    <button id="filter-all" onclick="filterPortfolio('all')" class="filter-btn active px-6 py-2 rounded-full border border-blue-600 bg-blue-600 text-white transition duration-300">ស្នាដៃទាំងអស់</button>
+                    <button id="filter-graphic" onclick="filterPortfolio('graphic')" class="filter-btn px-6 py-2 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300">Graphic Design</button>
+                    <button id="filter-video" onclick="filterPortfolio('video')" class="filter-btn px-6 py-2 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300">Video Editing</button>
+                    <button id="filter-web" onclick="filterPortfolio('web')" class="filter-btn px-6 py-2 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300">Web Design</button>
+                    <button id="filter-3d" onclick="filterPortfolio('3d')" class="filter-btn px-6 py-2 rounded-full border border-gray-300 hover:border-blue-600 hover:text-blue-600 transition duration-300">3D Modeling</button>
+                </div>
+            </div>
+
+            <div id="portfolioGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Items will be injected by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-16">
+                <h2 class="text-3xl font-bold mb-4">សមាជិកក្រុមការងារ</h2>
+                <div class="h-1 w-20 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://www.quickheal.co.in/knowledge-centre/wp-content/uploads/sites/4/2025/03/Types-of-Hackers-in-Cybersecurity-991x563.jpg" alt="CEO" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">វឿន​ ដានិត</h3>
+                    <p class="text-blue-600 font-medium mb-4">Founder & Creative Director</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-telegram"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://i.postimg.cc/VkgyT0zy/2026-01-11-10-54-44.jpg" alt="Graphic" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">កន​ ចាន់ដារ៉ា</h3>
+                    <p class="text-blue-600 font-medium mb-4">Graphic Designer</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://i.postimg.cc/zvK6kVxs/2026-01-11-10-54-54.jpg" alt="Video" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">គាន ចាន់នី</h3>
+                    <p class="text-blue-600 font-medium mb-4">Motion Graphics </p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-red-600"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 4 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://i.postimg.cc/0yBnb9f5/2026-01-11-11-01-56.jpg" alt="Web" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">យឹម ភាព</h3>
+                    <p class="text-blue-600 font-medium mb-4">3D Modeling</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-slate-900"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 5 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://i.postimg.cc/fRTjwjH7/photo-2026-01-11-17-11-56.jpg" alt="Web" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">ថាត សីហា</h3>
+                    <p class="text-blue-600 font-medium mb-4">Web Developer</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-slate-900"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 6 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://i.postimg.cc/Wzyjh7Gd/2026-01-11-10-54-16.jpg" alt="Marketing" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">នួន វិទូ</h3>
+                    <p class="text-blue-600 font-medium mb-4">Fixer & Networking</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 7 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://i.postimg.cc/m2xTfmrb/Screenshot-2026-01-11-at-5-22-16-in-the-afternoon.png" alt="UXUI" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">ឆៃ​ លីហួរ</h3>
+                    <p class="text-blue-600 font-medium mb-4">UI/UX Designer</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 8 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">ប៉ែន សៀងហៃ</h3>
+                    <p class="text-blue-600 font-medium mb-4">3D Modeling & Video Editing</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-pink-600"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <!-- Team Member 9 -->
+                <div class="bg-gray-50 p-6 rounded-3xl border border-gray-100 group hover:shadow-xl transition-all duration-300">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-2xl overflow-hidden shadow-lg border-4 border-white">
+                        <img src="https://i.postimg.cc/PfMn9T0T/2026-01-11-17-35-03.jpg" alt="Accountant" class="w-full h-full object-cover group-hover:scale-110 transition-transform">
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900">មាន ច័ន្ទឧត្ដម​</h3>
+                    <p class="text-blue-600 font-medium mb-4">Graphic Designer & Web Developer</p>
+                    <div class="flex justify-center gap-3">
+                        <a href="#" class="text-gray-400 hover:text-blue-600"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-blue-400"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-xl border border-gray-100">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl font-bold text-gray-900">ចាប់ផ្ដើមគម្រោងជាមួយយើង</h2>
+                    <p class="text-gray-500 mt-2">បំពេញព័ត៌មានខាងក្រោម យើងនឹងទាក់ទងទៅអ្នកវិញភ្លាមៗ</p>
+                </div>
+                <!-- Form action points to your specified link -->
+                <form id="projectForm" action="@danitwebdevelobment" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">ឈ្មោះពេញ</label>
+                            <input type="text" name="fullname" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="ឧ. កុក សារ៉ាត់">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">អ៊ីមែល</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="example@gmail.com">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">ជ្រើសរើសសេវាកម្ម</label>
+                        <select name="service" id="serviceSelect" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition">
+                            <option value="graphic">Graphic Design</option>
+                            <option value="video">Video Editing</option>
+                            <option value="3d">3D Modeling</option>
+                            <option value="web">Web Design</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">សាររបស់អ្នក</label>
+                        <textarea name="message" rows="4" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition" placeholder="រៀបរាប់ពីគម្រោងរបស់អ្នក..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-xl font-bold text-lg hover:bg-blue-700 shadow-lg shadow-blue-200 transition">ផ្ញើគម្រោង (Send Project)</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 border-t border-slate-200 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <div class="flex flex-col items-center justify-center gap-3 mb-6">
+                <!-- កន្លែងដាក់ Logo ឱ្យនៅពីលើអត្ថបទ -->
+                <div class="p-1 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <img src="https://i.postimg.cc/mrmd3QBh/logo.png" alt="Logo" class="w-8 h-8 object-contain">
+                </div>
+                <div class="flex flex-col items-center">
+                    <span class="text-xl font-bold leading-none">
+                        <span style="color: #1E73FF;">Blue</span> <span class="text-black">Sweet</span>
+                    </span>
+                    <span class="text-[8px] text-gray-500 font-light tracking-[0.4em] uppercase mt-1">C R E A T I V E</span>
+                </div>
+            </div>
+            <p class="text-slate-500 mb-6 italic">"ផ្ដល់ជូននូវភាពផ្អែមល្ហែមតាមរយៈការរចនាដ៏អស្ចារ្យ"</p>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-blue-400 hover:text-white transition"><i class="fab fa-telegram"></i></a>
+                <a href="#" class="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-pink-600 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="text-sm text-slate-400">
+                &copy; 2024 Blue Sweet Agency. រក្សាសិទ្ធិគ្រប់យ៉ាង។
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for Preview -->
+    <div id="previewModal" class="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center p-4">
+        <button onclick="closePreview()" class="absolute top-6 right-6 text-white hover:text-gray-300">
+            <i data-lucide="x" class="w-10 h-10"></i>
+        </button>
+        <div id="modalContent" class="w-full max-w-5xl max-h-[90vh] flex items-center justify-center overflow-hidden rounded-2xl">
+            <!-- Content injected via JS -->
+        </div>
+    </div>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // Data for Portfolio
+        const portfolioData = [
+            {
+                id: 1,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/J43Kt8H8/Untitled-92.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/J43Kt8H8/Untitled-92.png'
+            },
+            {
+                id: 2,
+                category: 'video',
+                title: 'BBU Login',
+                thumbnail: 'https://i.postimg.cc/KcQT5Lqf/Screenshot-2026-01-11-at-4-09-59-in-the-afternoon.png',
+                type: 'youtube',
+                src: 'FkU_GjqLcgs' 
+            },
+            {
+                id: 3,
+                category: '3d',
+                title: 'BBU Logo 3D',
+                thumbnail: 'https://i.postimg.cc/wT624pd1/Screenshot-2026-01-11-at-5-52-09-in-the-afternoon.png',
+                type: '3d',
+                src: 'https://raw.githubusercontent.com/voeundanit1-prog/3d/main/TODAY.glb'
+            },
+             {
+                id: 3.1,
+                category: '3d',
+                title: 'Farm Gaming',
+                thumbnail: 'https://i.postimg.cc/vZy4tYRJ/Screenshot-2026-01-11-at-6-00-11-in-the-evening.png',
+                type: '3d',
+                src: 'https://raw.githubusercontent.com/voeundanit1-prog/3dd/main/cc.glb'
+            },
+            {
+                id: 3.2,
+                category: '3d',
+                title: 'Name 3D',
+                thumbnail: 'https://i.postimg.cc/vZy4tYRJ/Screenshot-2026-01-11-at-6-00-11-in-the-evening.png',
+                type: '3d',
+                src: 'https://raw.githubusercontent.com/voeundanit1-prog/3dd/main/cy.glb'
+            },
+            {
+                id: 4,
+                category: 'web',
+                title: 'khmershop',
+                thumbnail: 'https://i.postimg.cc/KcdyggGm/Screenshot-2026-01-11-at-2-25-47-in-the-afternoon.png',
+                type: 'link',
+                src: 'https://voeundanit1-prog.github.io/khmershop/'
+            },
+            {
+                id: 4.5,
+                category: 'web',
+                title: 'Portfolio',
+                thumbnail: 'https://i.postimg.cc/hGMC8NV0/Screenshot-2026-01-11-at-2-24-10-in-the-afternoon.png',
+                type: 'link',
+                src: 'https://danith2.github.io/My-Portfolio/'
+            },
+            {
+                id: 5,
+                category: 'video',
+                title: 'Motion Graphic',
+                thumbnail: 'https://i.postimg.cc/TYDDvS20/Screenshot-2026-01-11-at-4-21-18-in-the-afternoon.png',
+                type: 'youtube',
+                src: 'NChrTbvI1tIloXvn'
+            },
+            {
+            id: 5.1,
+                category: 'video',
+                title: 'Motion Graphic',
+                thumbnail: 'https://i.postimg.cc/rsJFqSb5/Screenshot-2026-01-11-at-4-26-32-in-the-afternoon.png',
+                type: 'youtube',
+                src: 'NChrTbvI1tIloXvn'
+            },
+            {
+            id: 5.2,
+                category: 'video',
+                title: 'Video editing',
+                thumbnail: 'https://i.postimg.cc/fTm1SzTP/Screenshot-2026-01-11-at-4-28-59-in-the-afternoon.png',
+                type: 'youtube',
+                src: 'NChrTbvI1tIloXvn'
+            },
+             {
+            id: 5.3,
+                category: 'video',
+                title: 'Video editing',
+                thumbnail: 'https://i.postimg.cc/wTRF70FK/Screenshot-2026-01-11-at-4-54-18-in-the-afternoon.png',
+                type: 'youtube',
+                src: 'NChrTbvI1tIloXvn'
+            },
+            {
+            id: 5.3,
+                category: 'video',
+                title: 'Video editing',
+                thumbnail: 'https://i.postimg.cc/Tw8Rc0Fn/Screenshot-2026-01-11-at-5-03-17-in-the-afternoon.png',
+                type: 'youtube',
+                src: 'NChrTbvI1tIloXvn'
+            },
+            {
+                id: 6,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/ZqnLfy7Y/Untitled-93.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/ZqnLfy7Y/Untitled-93.png'
+            },
+            {
+                id: 7,
+                category: 'mp4',
+                title: 'Custom Motion Graphics',
+                thumbnail: 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&q=80&w=800',
+                type: 'video',
+                src: 'https://www.tiktok.com/@copyright356/video/7488198479945141522?is_from_webapp=1&sender_device=pc&web_id=7499272657641342482'
+            },
+            {
+                id: 1.1,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/SRCd6FZW/Untitled-91.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/SRCd6FZW/Untitled-91.png'
+            },
+            {
+                id: 1.2,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/43QB3sDh/Untitled-65.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/43QB3sDh/Untitled-65.png'
+            },
+            {
+                id: 1.3,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/Zq8Dyrdn/Untitled-68.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/Zq8Dyrdn/Untitled-68.png'
+            }, 
+            {
+                id: 1.4,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/JnwMRcWh/Untitled-80.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/JnwMRcWh/Untitled-80.png'
+            }, 
+            {
+                id: 1.5,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/J7ZC5kCN/Untitled-74.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/J7ZC5kCN/Untitled-74.png'
+            }, 
+            {
+                id: 1.6,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/YSDMTKdQ/Untitled-86.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/YSDMTKdQ/Untitled-86.png'
+            }, 
+          {
+                id: 1.7,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/MTtP9qt8/Untitled-67.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/MTtP9qt8/Untitled-67.png'
+            }, 
+            {
+                id: 1.9,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/658jhsvD/Untitled-64.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/658jhsvD/Untitled-64.png'
+            },  
+            {
+                id: 16,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/GpCXrH5C/Untitled-63.png ',
+                type: 'image',
+                src: 'https://i.postimg.cc/GpCXrH5C/Untitled-63.png '
+            },  
+            {
+                id: 18,
+                category: 'graphic',
+                title: 'Poster',
+                thumbnail: 'https://i.postimg.cc/gcNQDqB6/Untitled-73.png',
+                type: 'image',
+                src: 'https://i.postimg.cc/gcNQDqB6/Untitled-73.png '
+            },  
+        ];
+
+        function renderPortfolio(filter = 'all') {
+            const grid = document.getElementById('portfolioGrid');
+            grid.innerHTML = '';
+
+            const filteredItems = filter === 'all' 
+                ? portfolioData 
+                : portfolioData.filter(item => item.category === filter);
+
+            filteredItems.forEach(item => {
+                const card = document.createElement('div');
+                card.className = 'portfolio-card relative group rounded-3xl overflow-hidden cursor-pointer shadow-md h-64';
+                
+                card.innerHTML = `
+                    <img src="${item.thumbnail}" alt="${item.title}" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="overlay absolute inset-0 bg-black bg-opacity-60 flex flex-col items-center justify-center opacity-0 transition duration-300">
+                        <h3 class="text-white text-xl font-bold mb-4">${item.title}</h3>
+                        <button onclick="openPreview(${item.id})" class="bg-white text-black px-6 py-2 rounded-full font-bold hover:bg-blue-600 hover:text-white transition">Preview</button>
+                    </div>
+                    <div class="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-xs font-bold uppercase shadow-sm">
+                        ${item.category}
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function navigateToCategory(category) {
+            document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                const btnId = `filter-${category}`;
+                const targetBtn = document.getElementById(btnId);
+                if (targetBtn) {
+                    targetBtn.click();
+                }
+            }, 100);
+            const select = document.getElementById('serviceSelect');
+            if (select) select.value = category;
+        }
+
+        function filterPortfolio(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+                btn.classList.add('border-gray-300', 'text-gray-900');
+            });
+
+            const activeBtn = event ? event.currentTarget : document.getElementById(`filter-${category}`);
+            if (activeBtn) {
+                activeBtn.classList.add('active', 'bg-blue-600', 'text-white', 'border-blue-600');
+                activeBtn.classList.remove('border-gray-300', 'text-gray-900');
+            }
+            renderPortfolio(category);
+        }
+
+        function openPreview(id) {
+            const item = portfolioData.find(i => i.id === id);
+            const modal = document.getElementById('previewModal');
+            const content = document.getElementById('modalContent');
+            content.innerHTML = '';
+            
+            if (item.type === 'image') {
+                content.innerHTML = `<img src="${item.src}" class="max-w-full max-h-full object-contain">`;
+            } else if (item.type === 'video') {
+                content.innerHTML = `<video controls autoplay class="w-full h-auto max-h-[80vh] bg-black"><source src="${item.src}" type="video/mp4"></video>`;
+            } else if (item.type === 'youtube') {
+                content.innerHTML = `<iframe width="100%" height="500" src="https://www.youtube.com/embed/${item.src}?autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>`;
+            } else if (item.type === '3d') {
+                content.innerHTML = `
+                    <model-viewer src="${item.src}" 
+                        auto-rotate camera-controls 
+                        shadow-intensity="1" 
+                        class="w-full h-[600px] bg-gray-200"
+                        ar>
+                    </model-viewer>`;
+            } else if (item.type === 'link') {
+                window.open(item.src, '_blank');
+                return;
+            }
+
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreview() {
+            const modal = document.getElementById('previewModal');
+            const content = document.getElementById('modalContent');
+            modal.style.display = 'none';
+            content.innerHTML = '';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Updated form handling to allow standard submission or custom handling
+        document.getElementById('projectForm').onsubmit = function(e) {
+            // Note: If you want the browser to actually navigate to the link, 
+            // you should remove e.preventDefault().
+            // I'll keep the visual feedback but allow the redirect if needed.
+            
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "កំពុងផ្ញើ... (Sending...)";
+            btn.disabled = true;
+
+            // This part is for visual effect. If you want a real submission, 
+            // the form will handle it via the 'action' attribute.
+        };
+
+        window.onload = () => {
+            renderPortfolio();
+        };
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('previewModal');
+            if (event.target == modal) {
+                closePreview();
+            }
+        }
+    </script>
+</body>
+</html>
